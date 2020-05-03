@@ -1,5 +1,5 @@
 from time import sleep
-print("-=-=-=-=-=-=-=-=-=-=-=-=-=-= CALCULADORA SIMPLES -=-=-=-=-=-=-=-=-=-=-=-=-=-=")
+print("-=-=-=-=-=-=-=-=-=-=-=-=-=-= CALCULADORA BÁSICA -=-=-=-=-=-=-=-=-=-=-=-=-=-=")
 print()
 sleep(2)  # Import da biblioteca sleep apenas para um charme/frescurinha na aplicacao
 
@@ -12,7 +12,7 @@ while True:
     op_parcial = 0  #Variavel que recera o primeiro resultado da operacao
 
     n1 = float(input("Informe um valor: ")) #Primeiro valor
-    sinal = str(input("Informe o sinal da operação [+ , -, *, /] : ")) #Sinal para operação
+    sinal = str(input("Informe o sinal da operação [+ , -, *, /, %] : ")) #Sinal para operação
     n2 = float(input("Informe outro valor: ")) #Segundo valor
 
     if sinal == "+":           #Condições
@@ -31,6 +31,7 @@ while True:
         divi = n1 / n2  #Op de divisao
         aux = divi #aux recebe valor de divisao
 
+
     op_parcial += aux #Op_parcial recebe o valor inicial mais o valor de aux | op_parcial = op_parcial + aux
     total = op_parcial #Total recebe o valor de op_parcial
 
@@ -43,7 +44,7 @@ while True:
     if resp != 2: #Diferente
         while resp!= 2:
 
-            sinal = str(input("Informe o sinal da operação [+ , -, *, /] : "))
+            sinal = str(input("Informe o sinal da operação [+ , -, *, /, %] : "))
             continuando = float(input("Informe o valor: ")) #Valor para  sequencial do calculo
 
 
@@ -108,7 +109,20 @@ while True:
                 totalizando = divi1
                 total = 0
 
+            if sinal == "%":
 
+                total += totalizando
+                porcentagem = (total * continuando) / 100
+
+                print()
+                print(porcentagem)
+                resp = int(input("Digite 1 p/ Continuar ou 000 p/ ENCERRAR: "))
+                if resp == 000:
+                    print('BYE')
+                    exit(000)
+                total = porcentagem
+                totalizando = porcentagem
+                total = 0
 
 
 
