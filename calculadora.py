@@ -12,7 +12,7 @@ while True:
     op_parcial = 0  #Variavel que recera o primeiro resultado da operacao
 
     n1 = float(input("Informe um valor: ")) #Primeiro valor
-    sinal = str(input("Informe o sinal da operação [+ , -, *, /, %] : ")) #Sinal para operação
+    sinal = str(input("Informe o sinal da operação [+ , -, *, /] : ")) #Sinal para operação
     n2 = float(input("Informe outro valor: ")) #Segundo valor
 
     if sinal == "+":           #Condições
