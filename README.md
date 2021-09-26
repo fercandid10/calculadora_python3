@@ -1,2 +1,2 @@
-# calculadora_completa_python3
-CALCULADORA COMPLETA EM PYTHON 3
+# calculadora_python3
+CALCULADORA EM PYTHON 3
